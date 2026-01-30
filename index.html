@@ -3,49 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discord Hub</title>
+  <title>Discord Gems Hub</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <img src="images/discord-logo.png" alt="Discord Logo" class="logo">
-    <h1>My Discord Hub</h1>
-    <p>A global social hub powered by games, events and community.</p>
+    <img src="images/discord-logo.png" alt="Discord Logo" width="100">
+    <h1>Discord Gems Hub</h1>
+    <p>A global social hub powered by games, events, and community</p>
   </header>
 
-  <nav>
-    <button onclick="showSection('home')">Home</button>
-    <button onclick="showSection('crates')">Crates</button>
-    <button onclick="showSection('wallet')">Wallet</button>
-  </nav>
-
-  <main>
-    <!-- HOME -->
-    <section id="home" class="section active">
-      <h2>Welcome!</h2>
-      <p>Login with Discord to start your journey.</p>
-      <button class="primary">Login with Discord</button>
-    </section>
-
-    <!-- CRATES -->
-    <section id="crates" class="section">
-      <h2>Crates</h2>
-      <div class="grid" id="crateGrid"></div>
-    </section>
-
-    <!-- WALLET -->
-    <section id="wallet" class="section">
-      <h2>Your Wallet</h2>
-      <div class="wallet">
-        <h3>💎 <span id="gemCount">22</span> GEMS</h3>
-        <ul id="walletLog">
-          <li>+1 Daily Login</li>
-          <li>-13 Meme Crate</li>
-          <li>+22 Purchase</li>
-        </ul>
-      </div>
-    </section>
-  </main>
+  <div class="container">
+    <div class="buttons">
+      <button class="primary" onclick="loginDiscord()">Login with Discord</button>
+      <button class="primary" onclick="window.location.href='crates.html'">View Crates</button>
+      <button class="primary" onclick="window.location.href='wallet.html'">Your Wallet</button>
+      <button class="primary" onclick="window.location.href='shop.html'">Shop</button>
+      <button class="primary" onclick="window.location.href='events.html'">Events</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
