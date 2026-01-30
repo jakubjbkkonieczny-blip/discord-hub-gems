@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop - Discord Gems Hub</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop - Gems Hub</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Shop</h1>
-    <p>Buy roles using your gems</p>
-  </header>
+<div class="background">
+  <div class="clouds"></div>
+</div>
 
-  <div class="container grid">
-    <div class="card">
-      <h2>💬 Social Star</h2>
-      <p>15 GEMS</p>
-      <button onclick="buyRole('Social Star', 15)">BUY</button>
-    </div>
-    <div class="card">
-      <h2>🎮 Game Multiverse</h2>
-      <p>15 GEMS</p>
-      <button onclick="buyRole('Game Multiverse', 15)">BUY</button>
-    </div>
-  </div>
+<header>
+  <img src="images/discord-logo.png" alt="Discord Logo" class="logo">
+  <h1>Shop</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="crates.html">Crates</a>
+    <a href="shop.html">Shop</a>
+  </nav>
+</header>
 
-  <script src="script.js"></script>
+<main class="container">
+  <div class="grid" id="shop-grid"></div>
+</main>
+
+<footer>
+  <p>© 2026 Gems Hub</p>
+</footer>
 </body>
 </html>
