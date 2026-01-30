@@ -1,76 +1,39 @@
 body {
   margin: 0;
-  font-family: Inter, Arial, sans-serif;
-  background: #0d0d0d;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
   color: white;
 }
 
-.top {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-  background: #111;
-}
+header { text-align: center; padding: 20px; }
+header img.logo { width: 100px; margin-bottom: 10px; }
 
-.top a {
-  color: #aaa;
-  margin-left: 20px;
-  text-decoration: none;
-}
+nav { text-align: center; margin: 20px 0; }
+nav button { margin: 0 10px; padding: 10px 20px; border-radius: 10px; border: none; cursor: pointer; }
+nav button:hover { opacity: 0.8; }
 
-.hero {
-  padding: 80px 40px;
-  text-align: center;
-}
+.primary { background: #5865f2; color: white; }
+.section { display: none; padding: 20px; }
+.section.active { display: block; }
 
-.hero h1 {
-  font-size: 3rem;
-}
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; }
 
-.buttons {
-  margin-top: 30px;
-}
-
-.btn {
-  padding: 12px 26px;
-  border-radius: 6px;
-  border: 1px solid #444;
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-.btn.primary {
-  background: #5865f2;
-  border: none;
-}
-
-section {
-  padding: 60px 40px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #151515;
-  padding: 30px;
-  border-radius: 10px;
+.crate {
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
   text-align: center;
   cursor: pointer;
-  transition: 0.3s;
+  transition: transform 0.3s;
 }
+.crate:hover { transform: scale(1.05); }
 
-.card:hover {
-  transform: translateY(-5px);
-  background: #1f1f1f;
-}
+.gray { background: rgba(255,255,255,0.1); }
+.pink { background: linear-gradient(135deg,#ff5f6d,#ffc371); }
+.red { background: linear-gradient(135deg,#cb2d3e,#ef473a); }
+.purple { background: linear-gradient(135deg,#8e2de2,#4a00e0); }
+.gold { background: linear-gradient(135deg,#f7971e,#ffd200); }
+.rainbow { background: linear-gradient(135deg,#00f260,#0575e6,#fc00ff); }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  opacity: 0.4;
-}
+.wallet { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 20px; max-width: 400px; margin: auto; }
