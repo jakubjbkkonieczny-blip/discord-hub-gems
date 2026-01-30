@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discord Gems Hub</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gems Hub</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
 </head>
 <body>
-  <div class="background"></div>
-  <header>
-    <img src="images/discord-logo.png" alt="Discord Logo" class="logo">
-    <h1>Discord Gems Hub</h1>
-    <p>A magical world of crates, roles, and gems!</p>
-  </header>
+<div class="background">
+  <div class="clouds"></div>
+</div>
 
-  <main class="container">
-    <div class="buttons">
-      <button class="primary" onclick="loginDiscord()">Login with Discord</button>
-      <button class="primary" onclick="window.location.href='crates.html'">View Crates</button>
-      <button class="primary" onclick="window.location.href='wallet.html'">Your Wallet</button>
-      <button class="primary" onclick="window.location.href='shop.html'">Shop</button>
-      <button class="primary" onclick="window.location.href='events.html'">Events</button>
-    </div>
-  </main>
+<header>
+  <img src="images/discord-logo.png" alt="Discord Logo" class="logo">
+  <h1>Gems Hub Discord</h1>
+  <p>Open crates. Flex your identity. Join the world.</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="crates.html">Crates</a>
+    <a href="shop.html">Shop</a>
+  </nav>
+</header>
 
-  <script src="script.js"></script>
+<main class="container">
+  <section class="wallet">
+    <h2>Your Wallet 💎</h2>
+    <p>Balance: <span id="wallet-balance">22</span> GEMS</p>
+  </section>
+
+  <section class="actions">
+    <button class="primary-btn" id="login-discord">Login with Discord</button>
+    <a href="crates.html"><button class="secondary-btn">View Crates</button></a>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Gems Hub. All rights reserved.</p>
+</footer>
 </body>
 </html>
