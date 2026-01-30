@@ -4,32 +4,65 @@
   <meta charset="UTF-8" />
   <title>Discord HUB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-    .box {
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.5rem;
-    }
-    p {
-      opacity: 0.7;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="box">
-    <h1>Discord HUB</h1>
-    <p>Site is live. More coming soon.</p>
+
+<header class="top">
+  <div class="logo">Discord HUB</div>
+  <nav>
+    <a href="#shop">Shop</a>
+    <a href="#crates">Crates</a>
+    <a href="#roles">Roles</a>
+    <a href="#account">Account</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Your role. Your flex. Your world.</h1>
+  <p>Open crates, earn gems, join events and stand out.</p>
+  <div class="buttons">
+    <a class="btn primary" href="#">Buy Gems</a>
+    <a class="btn" href="#">Join Discord</a>
   </div>
+</section>
+
+<section id="shop">
+  <h2>Buy Gems</h2>
+  <div class="grid">
+    <div class="card">7 zł → 9 💎</div>
+    <div class="card">15 zł → 22 💎</div>
+    <div class="card">30 zł → 47 💎</div>
+    <div class="card">60 zł → 99 💎</div>
+  </div>
+</section>
+
+<section id="crates">
+  <h2>Crates</h2>
+  <div class="grid">
+    <div class="card">Common Crate</div>
+    <div class="card">Meme Crate</div>
+    <div class="card">Gamer Crate</div>
+    <div class="card">Legendary Crate</div>
+  </div>
+</section>
+
+<section id="roles">
+  <h2>Buy Roles</h2>
+  <div class="grid">
+    <div class="card">VIP Role – 30 💎</div>
+    <div class="card">Mythic Role – 50 💎</div>
+  </div>
+</section>
+
+<section id="account">
+  <h2>Your Account</h2>
+  <p>Login with Discord to see your gems and rewards.</p>
+</section>
+
+<footer>
+  © Discord HUB
+</footer>
+
 </body>
 </html>
