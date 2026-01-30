@@ -1,50 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crates - Discord Gems Hub</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crates - Gems Hub</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Crates</h1>
-    <p>Open crates and get awesome rewards!</p>
-  </header>
+<div class="background">
+  <div class="clouds"></div>
+</div>
 
-  <div class="container grid">
-    <div class="card gray">
-      <h2>Common Crate</h2>
-      <p>7 GEMS</p>
-      <button onclick="openCrate('Common')">OPEN</button>
-    </div>
-    <div class="card pink">
-      <h2>Meme Crate</h2>
-      <p>13 GEMS</p>
-      <button onclick="openCrate('Meme')">OPEN</button>
-    </div>
-    <div class="card red">
-      <h2>Gamer Crate</h2>
-      <p>13 GEMS</p>
-      <button onclick="openCrate('Gamer')">OPEN</button>
-    </div>
-    <div class="card purple">
-      <h2>Aesthetic Crate</h2>
-      <p>13 GEMS</p>
-      <button onclick="openCrate('Aesthetic')">OPEN</button>
-    </div>
-    <div class="card gold">
-      <h2>Rich Crate</h2>
-      <p>29 GEMS</p>
-      <button onclick="openCrate('Rich')">OPEN</button>
-    </div>
-    <div class="card rainbow">
-      <h2>Legendary Crate</h2>
-      <p>73 GEMS</p>
-      <button onclick="openCrate('Legendary')">OPEN</button>
-    </div>
-  </div>
+<header>
+  <img src="images/discord-logo.png" alt="Discord Logo" class="logo">
+  <h1>Crates</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="crates.html">Crates</a>
+    <a href="shop.html">Shop</a>
+  </nav>
+</header>
 
-  <script src="script.js"></script>
+<main class="container">
+  <div class="grid" id="crate-grid"></div>
+</main>
+
+<footer>
+  <p>© 2026 Gems Hub</p>
+</footer>
 </body>
 </html>
