@@ -1,33 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
-  color: white;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
 }
 
-header { text-align: center; padding: 20px; }
-header img.logo { width: 100px; margin-bottom: 10px; }
-
-nav { text-align: center; margin: 20px 0; }
-nav button { margin: 0 10px; padding: 10px 20px; border-radius: 10px; border: none; cursor: pointer; }
-nav button:hover { opacity: 0.8; }
-
-.primary { background: #5865f2; color: white; }
-.section { display: none; padding: 20px; }
-.section.active { display: block; }
-
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; }
-
-.crate {
+header {
   padding: 20px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
   text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
 }
-.crate:hover { transform: scale(1.05); }
+
+h1 { font-size: 2.5rem; margin-bottom: 10px; }
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255,255,255,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 50px rgba(255,255,255,0.3);
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+  margin-top: 10px;
+}
+
+button.primary { background: #5865F2; color: #fff; }
+button.primary:hover { background: #4752c4; }
 
 .gray { background: rgba(255,255,255,0.1); }
 .pink { background: linear-gradient(135deg,#ff5f6d,#ffc371); }
@@ -36,4 +62,8 @@ nav button:hover { opacity: 0.8; }
 .gold { background: linear-gradient(135deg,#f7971e,#ffd200); }
 .rainbow { background: linear-gradient(135deg,#00f260,#0575e6,#fc00ff); }
 
-.wallet { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 20px; max-width: 400px; margin: auto; }
+.wallet {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 20px;
+}
