@@ -1,39 +1,45 @@
-let userGems = 22;
+const crates = [
+  {name:"Common Crate", price:7, color:"#D4D4D4"},
+  {name:"Meme Crate", price:13, color:"#FFB6C1"},
+  {name:"Gamer Crate", price:13, color:"#FF6347"},
+  {name:"Aesthetic Crate", price:13, color:"#9370DB"},
+  {name:"Rich Crate", price:29, color:"#FFD700"},
+  {name:"Legendary Crate", price:73, color:"#00FFFF"}
+];
 
-function loginDiscord() {
-  alert("✨ Magical Discord login coming soon! ✨");
+const shopItems = [
+  {name:"💬 Social Star", price:15},
+  {name:"🎮 Game Multiverse", price:15},
+  {name:"⚽ Matchday Madness", price:15}
+];
+
+// Inject crates
+const crateGrid = document.getElementById('crate-grid');
+if(crateGrid){
+  crates.forEach(c=>{
+    const div = document.createElement('div');
+    div.className='crate';
+    div.style.background=c.color;
+    div.innerHTML=`<h2>${c.name}</h2><p>${c.price} GEMS</p><button onclick="openCrate('${c.name}')">OPEN</button>`;
+    crateGrid.appendChild(div);
+  });
 }
 
-function openCrate(crate) {
-  const rewards = {
-    "Common": ["🙂 Chill Human 🙂", "😎 Cool Dude 😎", "✨ Casual Vibe ✨"],
-    "Meme": ["🤡 Certified Clown 🤡", "💀 Dead Inside 💀", "🗿 Stone Face 🗿"],
-    "Gamer": ["🎮 Game Addict 🎮", "🔫 Trigger Happy 🔫", "🏆 Rank Grinder 🏆"],
-    "Aesthetic": ["🌸 Soft Bloom 🌸", "🌙 Moon Drifter 🌙", "🦋 Blue Butterfly 🦋"],
-    "Rich": ["💎 Diamond Touch 💎", "👑 Crowned One 👑", "💰 Money Talks 💰"],
-    "Legendary": ["👑🔥 Chosen Monarch 🔥👑", "💎✨ Diamond Legend ✨💎"]
-  };
-  const rewardList = rewards[crate];
-  const reward = rewardList[Math.floor(Math.random()*rewardList.length)];
-
-  // Floating alert effect
-  const alertBox = document.createElement("div");
-  alertBox.classList.add("crate-alert");
-  alertBox.innerText =🎁 You got: ${reward}!`;
-  document.body.appendChild(alertBox);
-  setTimeout(() => { alertBox.remove(); }, 3000);
+// Inject shop
+const shopGrid = document.getElementById('shop-grid');
+if(shopGrid){
+  shopItems.forEach(i=>{
+    const div = document.createElement('div');
+    div.className='shop-item';
+    div.innerHTML=`<h2>${i.name}</h2><p>${i.price} GEMS</p><button onclick="buyItem('${i.name}')">BUY</button>`;
+    shopGrid.appendChild(div);
+  });
 }
 
-function buyRole(role, cost) {
-  if(userGems >= cost) {
-    userGems -= cost;
-    alert💎 You bought ${role}! Remaining gems: ${userGems}`);
-  } else {
-    alert("❌ Not enough gems!");
-  }
+function openCrate(name){
+  alert(🎁 Opening ${name} with animation...);
 }
 
-function addGemFromAd() {
-  userGems += 1;
-  alert("💎 +1 gem for watching ad!");
+function buyItem(name){
+  alert💰 Purchased ${name}!`);
 }
