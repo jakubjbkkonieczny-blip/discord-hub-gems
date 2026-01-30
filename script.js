@@ -1,7 +1,7 @@
 let userGems = 22;
 
 function loginDiscord() {
-  alert("Login with Discord functionality goes here.");
+  alert("✨ Magical Discord login coming soon! ✨");
 }
 
 function openCrate(crate) {
@@ -15,19 +15,25 @@ function openCrate(crate) {
   };
   const rewardList = rewards[crate];
   const reward = rewardList[Math.floor(Math.random()*rewardList.length)];
-  alert(You opened ${crate} Crate and got: ${reward}!);
+
+  // Floating alert effect
+  const alertBox = document.createElement("div");
+  alertBox.classList.add("crate-alert");
+  alertBox.innerText =🎁 You got: ${reward}!`;
+  document.body.appendChild(alertBox);
+  setTimeout(() => { alertBox.remove(); }, 3000);
 }
 
 function buyRole(role, cost) {
   if(userGems >= cost) {
     userGems -= cost;
-    alert(You bought ${role} role! Remaining gems: ${userGems});
+    alert💎 You bought ${role}! Remaining gems: ${userGems}`);
   } else {
-    alert("Not enough gems!");
+    alert("❌ Not enough gems!");
   }
 }
 
 function addGemFromAd() {
   userGems += 1;
-  alert("You got +1 gem for watching an ad!");
+  alert("💎 +1 gem for watching ad!");
 }
